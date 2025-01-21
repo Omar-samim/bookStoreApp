@@ -1,4 +1,5 @@
 import React from "react";
+
 import Course from "../components/course";
 import Navbar from "../components/Navbar";
 

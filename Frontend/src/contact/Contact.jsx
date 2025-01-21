@@ -48,7 +48,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="flex justify-center mx-auto mt-5">
+    <div className="flex justify-center mx-auto mt-10 md:mt-5">
       <div className="max-w-screen-2xl container mx-auto md:px-20 md:py-20 py-30 px-4 flex flex-col my-10">
         <h1 className="text-4xl font-bold-1000">
           Contact <span className="text-pink-500">Us</span>{" "}
