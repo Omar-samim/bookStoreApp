@@ -4,7 +4,7 @@ import banner from "../assets/Banner.png";
 const Banner = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 md:py-20 py-30 px-4 flex flex-col md:flex-row my-10">
+      <div className="max-w-screen-2xl container md:px-20 md:py-20 py-30 px-4 flex flex-col md:flex-row my-10">
         <div className="order-2 md:order-1 w-full md:w-1/2 mt-12 md:mt-32">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
@@ -31,7 +31,7 @@ const Banner = () => {
           </div>
           <button className="btn mt-6 text-white bg-pink-500">Secondary</button>
         </div>
-        <div className="order-1 w-full md:w-1/2 mt-12 flex justify-center md:mt-32">
+        <div className="order-1 w-full md:w-1/2 mt-10 flex justify-center ">
           <img src={banner} className="w-92 h-92 gap-10" alt="" />
         </div>
       </div>
