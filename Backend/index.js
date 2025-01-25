@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 import bookRoute from "./route/book.route.js";
@@ -14,10 +15,18 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 const URI = process.env.MongoDBURL;
 
+// Serve static files from the frontend
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
+
 // connect to mongoDB
 
+const mongoUrl = process.env.MONGO_URI;
 mongoose
-  .connect(URI, {})
+  .connect(mongoUrl, {})
   .then(() => console.log("Conected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error: ", err));
 
